@@ -1,0 +1,9 @@
+*.tar
+*.env
+*.bak
+*.log
+.terraform*
+*.tfstate*
+clab-*/
+**/__pycache__/
+*.egg-info

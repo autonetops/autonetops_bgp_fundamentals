@@ -1,0 +1,31 @@
+mpls ip
+
+vrf instance {{ vrf.name }}
+ip routing vrf {{ vrf.name }}
+    
+{# customer interface #}
+{% for interface in interfaces.customer %}
+    interface {{ interface.name }}
+        vrf {{ vrf.name }}
+        ip add  {{ interface.ip_address }}
+{% endfor %}
+
+{# service provider interface #}
+{% for interface in interfaces.sp %}
+    interface {{ interface.name }}
+        mpls ip
+        ip add  {{ interface.ip_address }}
+{% endfor %}
+
+
+router bgp {{ bgp.as }}
+  router-id {{ bgp.router_id }}
+  address-family vpn-ipv4
+
+  bgp vrf {{ vrf.name }}
+    rd {{ vrf.rd }}
+    neighbor {{ neighbors.customer.address }} remote-as {{ neighbors.customer.remote_as }}
+    address-family ipv4
+      neighbor {{ neighbors.customer.address }} activate
+      
+      
