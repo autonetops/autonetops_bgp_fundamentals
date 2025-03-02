@@ -25,13 +25,13 @@
   },
   "secrets": {
       "ARTOKEN": {
-          "description": "token to auto-download EOS images from arista.com."
-      },
+          "description": "token para auto-download das imagens EOS da arista.com."
+      }
   },
   "customizations": {
       "codespaces": {
         "openFiles": [
-          "../${NAME}.md"
+          "../index.md"
         ]
       },
       "vscode": {
