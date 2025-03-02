@@ -4,6 +4,7 @@ Este laboratório introduz os alunos ao Border Gateway Protocol (BGP), um protoc
 O laboratório inclui um desafio de solução de problemas para reforçar o aprendizado e uma tarefa de automação de rede usando FastAPI e NAPALM para recuperar informações de vizinhos BGP, demonstrando práticas modernas de rede. O laboratório é projetado para ser envolvente, prático e um excelente exemplo para seus propósitos de divulgação.
 
 ## Topologia
+![bgp_fundamentals_diagram](https://ubjpcyfllztpftxqaldu.supabase.co/storage/v1/object/sign/img/labs/lab/md/bgp_fundamentals_diagram.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWcvbGFicy9sYWIvbWQvYmdwX2Z1bmRhbWVudGFsc19kaWFncmFtLndlYnAiLCJpYXQiOjE3NDA5NDA5NTUsImV4cCI6MTg5ODYyMDk1NX0.Eun52MyKJbWMVVXHM9eDiwCbHkVYKaLv1ZH1aSSOGLg)
 O laboratório utiliza uma topologia de três roteadores para demonstrar interações de eBGP e iBGP:
 
     R1 (AS 100): Um roteador Cisco IOL atuando como o gateway entre AS 100 e AS 200.
