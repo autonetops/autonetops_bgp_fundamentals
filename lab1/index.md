@@ -1,5 +1,5 @@
 ## Visão Geral
-Este laboratório introduz os alunos ao Border Gateway Protocol (BGP), um protocolo crítico para o roteamento entre domínios na internet. Usando imagens Cisco IOL (IOS on Linux) em um ambiente Containerlab, os alunos configurarão uma topologia de múltiplos roteadores para explorar o BGP externo (eBGP), o BGP interno (iBGP) e conceitos chave do BGP, como o atributo next-hop-self.
+Este laboratório introduz os alunos ao Border Gateway Protocol (BGP), um protocolo crítico para o roteamento entre domínios na internet. Os alunos configurarão uma topologia de múltiplos roteadores para explorar o BGP externo (eBGP), o BGP interno (iBGP) e conceitos chave do BGP, como o atributo next-hop-self.
 
 O laboratório inclui um desafio de solução de problemas para reforçar o aprendizado e uma tarefa de automação de rede usando FastAPI e NAPALM para recuperar informações de vizinhos BGP, demonstrando práticas modernas de rede. O laboratório é projetado para ser envolvente, prático e um excelente exemplo para seus propósitos de divulgação.
 
