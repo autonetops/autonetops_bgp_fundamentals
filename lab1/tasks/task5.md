@@ -1,24 +1,24 @@
-### Task 5: Modify the `/bgp/neighbors` Endpoint to Accept a Device IP
+### Tarefa 5: Modificar o Endpoint `/bgp/neighbors` para Aceitar um IP de Dispositivo
 
-In this task, you will update the existing `/bgp/neighbors` endpoint to accept a `device_ip` parameter. This will allow the endpoint to retrieve BGP neighbor information from any device specified in the topology.
+Nesta tarefa, você atualizará o endpoint existente `/bgp/neighbors` para aceitar um parâmetro `device_ip`. Isso permitirá que o endpoint recupere informações de vizinhos BGP de qualquer dispositivo especificado na topologia.
 
-#### Steps
-1. **Update the Endpoint**:
-   - Modify the endpoint to `GET /bgp/neighbors/{device_ip}`.
-   - Use the `device_ip` path parameter to specify which device's BGP neighbors to retrieve.
-   - Check if the `device_ip` exists in the `topology` dictionary. If not, return a 404 error.
+#### Passos
+1. **Atualizar o Endpoint**:
+   - Modifique o endpoint para `GET /bgp/neighbors/{device_ip}`.
+   - Use o parâmetro de caminho `device_ip` para especificar de qual dispositivo recuperar os vizinhos BGP.
+   - Verifique se o `device_ip` existe no dicionário `topology`. Caso contrário, retorne um erro 404.
 
-2. **Integrate with NAPALM**:
-   - Use the device’s type and credentials from the `topology` dictionary to connect via NAPALM.
-   - Fetch the BGP neighbor data using NAPALM’s `get_bgp_neighbors()` method.
-   - Cache the retrieved BGP neighbor data in the `topology` dictionary under a new key, `"bgp_neighbors"`.
+2. **Integrar com NAPALM**:
+   - Use o tipo e as credenciais do dispositivo do dicionário `topology` para se conectar via NAPALM.
+   - Recupere os dados de vizinhos BGP usando o método `get_bgp_neighbors()` do NAPALM.
+   - Armazene os dados recuperados de vizinhos BGP no dicionário `topology` sob uma nova chave, `"bgp_neighbors"`.
 
-3. **Return the BGP Neighbor Data**:
-   - Return the device IP and its BGP neighbor information in JSON format.
+3. **Retornar os Dados de Vizinhos BGP**:
+   - Retorne o IP do dispositivo e suas informações de vizinhos BGP em formato JSON.
 
-#### Starter Code
+#### Código Inicial
 ```python
 from napalm import get_network_driver
 from fastapi import HTTPException
 
-# Your code here
+# Seu código aqui

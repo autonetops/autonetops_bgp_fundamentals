@@ -1,22 +1,22 @@
-### Task 1: Configure eBGP Peering
+### Tarefa 1: Configurar Peering eBGP
 
-In this task, you will configure external BGP (eBGP) between R1 in AS 100 and R3 in AS 200. Your goal is to establish a BGP neighbor relationship and advertise loopback interfaces so that each router can reach the other's networks.
+Nesta tarefa, você configurará o BGP externo (eBGP) entre o R1 no AS 100 e o R3 no AS 200. Seu objetivo é estabelecer uma relação de vizinhança BGP e anunciar interfaces *loopback* para que cada roteador possa alcançar as redes do outro.
 
-#### Steps
-1. On R1:
-   - Configure BGP with AS 100.
-   - Add R3 (192.168.13.3) as an eBGP neighbor.
-   - Advertise loopback0 (1.1.1.1/32) and loopback1 (10.1.0.1/32) using a network statement.
-2. On R3:
-   - Configure BGP with AS 200.
-   - Add R1 (192.168.13.1) as an eBGP neighbor.
-   - Advertise loopback0 (3.3.3.3/32).
-3. Verify the BGP neighbor status using `show ip bgp summary`.
-4. Check the BGP table with `show ip bgp` to ensure routes are exchanged.
-5. Test connectivity by pinging 3.3.3.3 from R1 and 1.1.1.1 from R3.
+#### Passos
+1. No R1:
+   - Configure o BGP com o AS 100.
+   - Adicione o R3 (192.168.13.3) como vizinho eBGP.
+   - Anuncie o *loopback0* (1.1.1.1/32) e o *loopback1* (10.1.0.1/32) usando um comando *network*.
+2. No R3:
+   - Configure o BGP com o AS 200.
+   - Adicione o R1 (192.168.13.1) como vizinho eBGP.
+   - Anuncie o *loopback0* (3.3.3.3/32).
+3. Verifique o status dos vizinhos BGP usando `show ip bgp summary`.
+4. Verifique a tabela BGP com `show ip bgp` para garantir que as rotas foram trocadas.
+5. Teste a conectividade fazendo um *ping* de 3.3.3.3 a partir do R1 e de 1.1.1.1 a partir do R3.
 
-#### Deliverables
-- BGP is up between R1 and R3.
-- R1 can ping 3.3.3.3, and R3 can ping 1.1.1.1 and 10.1.0.1.
+#### Entregáveis
+- O BGP está ativo entre R1 e R3.
+- O R1 pode fazer *ping* em 3.3.3.3, e o R3 pode fazer *ping* em 1.1.1.1 e 10.1.0.1.
 
-Run `autonetops task 1` to set up the initial state if needed.
+Execute `autonetops task 1` para configurar o estado inicial, se necessário.

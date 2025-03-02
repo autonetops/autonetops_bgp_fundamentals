@@ -1,17 +1,17 @@
-### Task 3: Troubleshoot BGP
+### Tarefa 3: Solucionar Problemas no BGP
 
-Something’s wrong! R2 cannot see the 10.1.0.0/24 prefix from R1, even though R1 is advertising it to R3. Investigate and fix the issue.
+Algo está errado! O R2 não consegue ver o prefixo 10.1.0.0/24 do R1, mesmo que o R1 esteja anunciando para o R3. Investigue e corrija o problema.
 
-#### Steps
-1. Check the BGP table on R2 (`show ip bgp`)—is 10.1.0.1/32 present?
-2. On R1, examine the BGP configuration (`show run | section bgp`).
-3. Look for filters, policies, or missing commands that might block the advertisement to R2.
-4. Fix the issue and verify that R2 now sees 10.1.0.1/32.
-5. Test by pinging 10.1.0.1 from R2.
+#### Passos
+1. Verifique a tabela BGP no R2 (`show ip bgp`)—o 10.1.0.1/32 está presente?
+2. No R1, examine a configuração BGP (`show run | section bgp`).
+3. Procure por filtros, políticas ou comandos ausentes que possam estar bloqueando o anúncio para o R2.
+4. Corrija o problema e confirme que o R2 agora vê o 10.1.0.1/32.
+5. Teste fazendo um *ping* de 10.1.0.1 a partir do R2.
 
-#### Hint
-Compare what R3 sees versus R2. Is R1 treating its neighbors differently?
+#### Dica
+Compare o que o R3 vê com o que o R2 vê. O R1 está tratando seus vizinhos de forma diferente?
 
-#### Deliverables
-- R2’s BGP table includes 10.1.0.1/32.
-- Successful ping from R2 to 10.1.0.1.
+#### Entregáveis
+- A tabela BGP do R2 inclui 10.1.0.1/32.
+- *Ping* bem-sucedido de R2 para 10.1.0.1.
