@@ -6,13 +6,13 @@ O laboratório inclui um desafio de solução de problemas para reforçar o apre
 ## Topologia
 O laboratório utiliza uma topologia de três roteadores para demonstrar interações de eBGP e iBGP:
 
-R1 (AS 100): Um roteador Cisco IOL atuando como o gateway entre AS 100 e AS 200.
-R2 (AS 100): Um roteador Cisco IOL interno ao AS 100, conectado apenas ao R1.
-R3 (AS 200): Um roteador Cisco IOL em um sistema autônomo diferente, conectado ao R1.
+    R1 (AS 100): Um roteador Cisco IOL atuando como o gateway entre AS 100 e AS 200.
+    R2 (AS 100): Um roteador Cisco IOL interno ao AS 100, conectado apenas ao R1.
+    R3 (AS 200): Um roteador Cisco IOL em um sistema autônomo diferente, conectado ao R1.
 
 ### Conexões
-R1 eth1 <-> R3 eth1: Peering eBGP entre AS 100 e AS 200.
-R1 eth2 <-> R2 eth1: Peering iBGP dentro do AS 100.
+    R1 eth1 <-> R3 eth1: Peering eBGP entre AS 100 e AS 200.
+    R1 eth2 <-> R2 eth1: Peering iBGP dentro do AS 100.
 
 ### Endereçamento IP
 Cada roteador possui uma interface loopback0 para identificação e anúncio de rotas:
