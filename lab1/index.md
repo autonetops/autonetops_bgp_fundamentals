@@ -18,8 +18,11 @@ R1 eth2 <-> R2 eth1: Peering iBGP dentro do AS 100.
 Cada roteador possui uma interface loopback0 para identificação e anúncio de rotas:
 
 R1: 1.1.1.1/32 (Loopback0), 10.1.0.1/32 (Loopback1)
+
 R2: 2.2.2.2/32 (Loopback0), 10.2.0.1/32 (Loopback2)
+
 R3: 3.3.3.3/32 (Loopback0)
+
 As interfaces físicas usarão os seguintes endereços IP:
 
 R1 eth1: 192.168.13.1/24
