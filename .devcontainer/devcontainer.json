@@ -12,7 +12,7 @@
       "storage": "32gb"
   },
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-  "workspaceFolder": "/workspace/tasks",
+  "workspaceFolder": "/workspace",
   "containerEnv": {
       "CEOS_LAB_VERSION": "${localEnv:CEOS_LAB_VERSION}"
   },
