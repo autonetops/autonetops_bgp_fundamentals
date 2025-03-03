@@ -2,12 +2,15 @@ FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
 ARG CLAB_VERSION
 #ARG CEOS_LAB_VERSION_ARG
-ARG NETBOX_URL
+ARG NETBOX_URL_ARG
 ARG NETBOX_TOKEN
 ARG PRIV_KEY_NAME
 
+RUN echo ${NETBOX_URL_ARG}
+
 #ENV CEOS_LAB_VERSION=${CEOS_LAB_VERSION_ARG}
-ENV NETBOX_URL=${NETBOX_URL}
+ENV NETBOX_URL=${NETBOX_URL_ARG}
+RUN echo ${NETBOX_URL}
 ENV NETBOX_TOKEN=${NETBOX_TOKEN}
 ENV PRIV_KEY_NAME=${PRIV_KEY_NAME}
 
@@ -42,10 +45,10 @@ RUN chmod +x /bin/postCreate.sh
 USER vscode
 
 # install the latest containerlab, yamllint, cook-and-cut and eos-downloader
-#RUN bash -c "$(curl -sL https://get.containerlab.dev)" -- -v ${CLAB_VERSION} \
-#    && pip3 install --user yamllint \
-#    && pip install --user "eos-downloader>=0.10.1" \
-#    && pip install --user passlib
+RUN bash -c "$(curl -sL https://get.containerlab.dev)" -- -v ${CLAB_VERSION} \
+    && pip3 install --user yamllint \
+    && pip install --user "eos-downloader>=0.10.1" \
+    && pip install --user passlib
 
 # install FastAPI
 COPY ./requirements.txt ./requirements.txt
