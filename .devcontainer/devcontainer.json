@@ -13,9 +13,11 @@
       "memory": "16gb",
       "storage": "32gb"
   },
+  "workspaceFolder": "/lab1/tasks",
   "containerEnv": {
       "CLAB_VERSION": "${localEnv:CLAB_VERSION}",
-      "PRIV_KEY_NAME": "ssh_key"
+      "PRIV_KEY_NAME": "ssh_key",
+      "TEST": "TESTENV"
   },
   "features": {
       "ghcr.io/devcontainers/features/github-cli:1": {},
@@ -49,8 +51,6 @@
                 "mutantdino.resourcemonitor",
                 "fabiospampinato.vscode-terminals",
                 //"marp-team.marp-vscode",
-                // Terraform
-                "hashicorp.terraform",
                 //Containerlab
                 "srl-labs.vscode-containerlab",
                 "marp-team.marp-vscode"
