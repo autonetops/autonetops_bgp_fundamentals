@@ -3,9 +3,7 @@
     "dockerfile": "Dockerfile",
     "args": {
         "CLAB_VERSION": "${localEnv:CLAB_VERSION}",
-        "NETBOX_URL_ARG": "${localEnv:NETBOX_URL}",
-        "NETBOX_TOKEN": "${localEnv:NETBOX_TOKEN}",
-        "PRIV_KEY_NAME": "ssh_key"
+        "PRIV_KEY_NAME": "${localEnv:PRIV_KEY_NAME}"
     }
   },
   "hostRequirements": {
@@ -16,8 +14,7 @@
   "workspaceFolder": "lab1/tasks",
   "containerEnv": {
       "CLAB_VERSION": "${localEnv:CLAB_VERSION}",
-      "PRIV_KEY_NAME": "ssh_key",
-      "TEST": "TESTENV"
+      "PRIV_KEY_NAME": "${localEnv:PRIV_KEY_NAME}",
   },
   "features": {
       "ghcr.io/devcontainers/features/github-cli:1": {},
