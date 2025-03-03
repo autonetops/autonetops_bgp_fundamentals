@@ -13,7 +13,7 @@
       "memory": "16gb",
       "storage": "32gb"
   },
-  "workspaceFolder": "/lab1/tasks",
+  "workspaceFolder": "lab1/tasks",
   "containerEnv": {
       "CLAB_VERSION": "${localEnv:CLAB_VERSION}",
       "PRIV_KEY_NAME": "ssh_key",
