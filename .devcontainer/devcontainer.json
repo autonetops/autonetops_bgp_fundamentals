@@ -3,7 +3,7 @@
     "dockerfile": "Dockerfile",
     "args": {
         "CLAB_VERSION": "${localEnv:CLAB_VERSION}",
-        "PRIV_KEY_NAME": "${localEnv:PRIV_KEY_NAME}"
+        "PRIV_KEY_NAME": "ssh_key"
     }
   },
   "hostRequirements": {
@@ -15,7 +15,7 @@
   "workspaceFolder": "/workspace",
   "containerEnv": {
       "CLAB_VERSION": "${localEnv:CLAB_VERSION}",
-      "PRIV_KEY_NAME": "${localEnv:PRIV_KEY_NAME}"
+      "PRIV_KEY_NAME": "ssh_key"
   },
   "features": {
       "ghcr.io/devcontainers/features/github-cli:1": {},
