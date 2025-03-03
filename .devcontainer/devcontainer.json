@@ -14,7 +14,7 @@
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
   "workspaceFolder": "/workspace",
   "containerEnv": {
-      "CEOS_LAB_VERSION": "${localEnv:CEOS_LAB_VERSION}"
+      "CLAB_VERSION": "${localEnv:CLAB_VERSION}"
   },
   "features": {
       "ghcr.io/devcontainers/features/github-cli:1": {},
