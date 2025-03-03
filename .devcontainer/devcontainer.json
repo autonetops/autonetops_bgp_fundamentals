@@ -11,7 +11,7 @@
       "memory": "16gb",
       "storage": "32gb"
   },
-  "workspaceMount": "source=${localWorkspaceFolder}/lab1,target=/workspace,type=bind",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
   "workspaceFolder": "/workspace",
   "containerEnv": {
       "CEOS_LAB_VERSION": "${localEnv:CEOS_LAB_VERSION}"
