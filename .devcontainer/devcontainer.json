@@ -13,8 +13,6 @@
       "memory": "16gb",
       "storage": "32gb"
   },
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-  "workspaceFolder": "/workspace",
   "containerEnv": {
       "CLAB_VERSION": "${localEnv:CLAB_VERSION}",
       "PRIV_KEY_NAME": "ssh_key"
