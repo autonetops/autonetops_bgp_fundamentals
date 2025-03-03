@@ -14,7 +14,8 @@
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
   "workspaceFolder": "/workspace",
   "containerEnv": {
-      "CLAB_VERSION": "${localEnv:CLAB_VERSION}"
+      "CLAB_VERSION": "${localEnv:CLAB_VERSION}",
+      "PRIV_KEY_NAME": "${localEnv:PRIV_KEY_NAME}"
   },
   "features": {
       "ghcr.io/devcontainers/features/github-cli:1": {},
