@@ -2,7 +2,6 @@
   "build": { 
     "dockerfile": "Dockerfile",
     "args": {
-        "CEOS_LAB_VERSION": "${localEnv:CEOS_LAB_VERSION}",
         "CLAB_VERSION": "${localEnv:CLAB_VERSION}",
         "PRIV_KEY_NAME": "${localEnv:PRIV_KEY_NAME}"
     }
@@ -12,21 +11,15 @@
       "memory": "16gb",
       "storage": "32gb"
   },
-  "workspaceMount": "source=${localWorkspaceFolder}/labs/${TOPIC}/${NAME},target=/workspace,type=bind",
+  "workspaceMount": "source=${localWorkspaceFolder}/${containerWorkspaceFolder},target=/workspace,type=bind",
   "workspaceFolder": "/workspace/tasks",
   "containerEnv": {
-      "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
       "CEOS_LAB_VERSION": "${localEnv:CEOS_LAB_VERSION}"
   },
   "features": {
       "ghcr.io/devcontainers/features/github-cli:1": {},
       "ghcr.io/devcontainers/features/docker-in-docker:2": {},
       "ghcr.io/devcontainers/features/terraform:1": {}
-  },
-  "secrets": {
-      "ARTOKEN": {
-          "description": "token para auto-download das imagens EOS da arista.com."
-      }
   },
   "customizations": {
       "codespaces": {
