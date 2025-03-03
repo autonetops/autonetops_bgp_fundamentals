@@ -59,7 +59,8 @@
   "forwardPorts": [2222],
   "portsAttributes": {
     "2222": {
-      "label": "FastAPI"
+      "label": "FastAPI",
+      "protocol": "https"
     }
   },
   "postCreateCommand": "postCreate.sh",
