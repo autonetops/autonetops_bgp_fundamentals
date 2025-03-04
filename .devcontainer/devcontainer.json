@@ -33,7 +33,7 @@
   "customizations": {
       "codespaces": {
         "openFiles": [
-          "../index.md"
+          "/workspace/index.md"
         ]
       },
       "vscode": {
