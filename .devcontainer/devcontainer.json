@@ -71,5 +71,5 @@
     }
   },
   "postCreateCommand": "/bin/postCreate.sh",
-  "postStartCommand": ["clab deploy -t ../lab1.clab.yaml"]
+  "postStartCommand": ["containerlab", "deploy", "-t", "../lab1.clab.yaml"]
 }
