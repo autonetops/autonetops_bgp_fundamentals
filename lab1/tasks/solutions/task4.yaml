@@ -2,12 +2,12 @@ devices:
   - ip: 192.168.13.1
     type: ios
     username: admin
-    password: cisco
+    password: autonetops
   - ip: 192.168.12.2
     type: ios
     username: admin
-    password: cisco
+    password: autonetops
   - ip: 192.168.13.3
     type: ios
     username: admin
-    password: cisco
+    password: autonetops
