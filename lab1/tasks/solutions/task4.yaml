@@ -1,13 +1,13 @@
 devices:
-  - ip: 192.168.13.1
+  - ip: 172.20.20.11
     type: ios
     username: admin
     password: autonetops
-  - ip: 192.168.12.2
+  - ip: 172.20.20.12
     type: ios
     username: admin
     password: autonetops
-  - ip: 192.168.13.3
+  - ip: 172.20.20.13
     type: ios
     username: admin
     password: autonetops
