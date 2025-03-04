@@ -50,5 +50,3 @@ RUN pip install "fastapi[standard]"
 # Generate an SSH key pair with no passphrase for EC2
 # The -f option specifies the output file and -N "" sets an empty passphrase.
 RUN ssh-keygen -t rsa -b 2048 -f ~/.ssh/${ANO_PRIV_KEY_NAME} -N ""
-
-#EXPOSE 80 443 22 3443 179
