@@ -1,5 +1,11 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
+ARG ANO_CLAB_VERSION
+ARG ANO_PRIV_KEY_NAME
+
+ENV ANO_PRIV_KEY_NAME=${ANO_PRIV_KEY_NAME}
+ENV ANO_CLAB_VERSION=${ANO_CLAB_VERSION}
+
 # install some basic tools inside the container
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
