@@ -1,6 +1,6 @@
 ip domain name autonetops
 !
-username admin priv 15 secret @ut0net0p$
+username admin priv 15 secret autonetops
 !
 ip ssh version 2
 !
