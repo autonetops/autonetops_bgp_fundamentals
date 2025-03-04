@@ -70,6 +70,6 @@
       "protocol": "https"
     }
   },
-  "postCreateCommand": "postCreate.sh",
+  "postCreateCommand": "/bin/postCreate.sh",
   "postStartCommand": ["sudo -E containerlab deploy -t ../lab1.clab.yaml"]
 }
