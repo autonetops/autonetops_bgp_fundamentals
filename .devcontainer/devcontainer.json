@@ -33,7 +33,8 @@
   "customizations": {
       "codespaces": {
         "openFiles": [
-          "../index.md"
+          "../index.md",
+          "task1.md"
         ]
       },
       "vscode": {
