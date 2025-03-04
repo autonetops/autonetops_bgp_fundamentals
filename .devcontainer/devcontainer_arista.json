@@ -23,6 +23,9 @@
       },
       "ANO_PRIV_KEY_NAME": {
           "description": "private-key-name"
+      },
+      "ARTOKEN": {
+          "description": "arista token"
       }
   },
   "features": {
