@@ -1,11 +1,5 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
-ARG ANO_CLAB_VERSION
-ARG ANO_PRIV_KEY_NAME
-
-ENV PRIV_KEY_NAME=${ANO_PRIV_KEY_NAME}
-ENV CLAB_VERSION=${ANO_CLAB_VERSION}
-
 # install some basic tools inside the container
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -37,7 +31,7 @@ RUN chmod +x /bin/postCreate.sh
 USER vscode
 
 # install the latest containerlab, yamllint, cook-and-cut and eos-downloader
-RUN bash -c "$(curl -sL https://get.containerlab.dev)" -- -v ${CLAB_VERSION} \
+RUN bash -c "$(curl -sL https://get.containerlab.dev)" -- -v ${ANO_CLAB_VERSION} \
     && pip3 install --user yamllint \
     && pip install --user "eos-downloader>=0.10.1" \
     && pip install --user passlib
@@ -49,6 +43,6 @@ RUN pip install "fastapi[standard]"
 
 # Generate an SSH key pair with no passphrase for EC2
 # The -f option specifies the output file and -N "" sets an empty passphrase.
-RUN ssh-keygen -t rsa -b 2048 -f ~/.ssh/${PRIV_KEY_NAME} -N ""
+RUN ssh-keygen -t rsa -b 2048 -f ~/.ssh/${ANO_PRIV_KEY_NAME} -N ""
 
 #EXPOSE 80 443 22 3443 179
