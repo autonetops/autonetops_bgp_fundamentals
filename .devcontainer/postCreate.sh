@@ -7,5 +7,3 @@ set +e
 echo 'export TF_VAR_VPN_CODESPACES_2222="https://$CODESPACE_NAME-2222.app.github.dev"' >> ~/.bashrc
 echo 'export TF_VAR_VPN_CODESPACES_IP=$(curl -s ifconfig.me)' >> ~/.bashrc
 source ~/.bashrc
-
-docker pull ghcr.io/autonetops/autonetops_labs/cisco_iol:latest
