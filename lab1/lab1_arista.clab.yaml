@@ -9,15 +9,15 @@ topology:
     r1:
       mgmt-ipv4: 172.20.20.11
       kind: ceos
-      image: ceos:latest
+      image: arista/ceos:latest
     r2:
       mgmt-ipv4: 172.20.20.12
       kind: ceos
-      image: ceos:latest
+      image: arista/ceos:latest
     r3:
       mgmt-ipv4: 172.20.20.13
       kind: ceos
-      image: ceos:latest
+      image: arista/ceos:latest
   
   links:
     - endpoints: ["r1:Ethernet1", "r3:Ethernet1"]
