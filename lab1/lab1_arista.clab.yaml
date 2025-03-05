@@ -3,7 +3,7 @@ name: bgp_fundamentals
 topology:
   defaults:
     kind: ceos
-    startup-config: configs/arista/__clabNodeName__.cfg.partial
+    startup-config: configs/arista/__clabNodeName__.cfg
 
   nodes:
     r1:
