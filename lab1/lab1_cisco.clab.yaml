@@ -3,7 +3,7 @@ name: bgp_fundamentals
 topology:
   defaults:
     kind: cisco_iol
-    startup-config: configs/__clabNodeName__.cfg.partial
+    startup-config: configs/cisco/__clabNodeName__.cfg.partial
 
   nodes:
     r1:
