@@ -43,7 +43,7 @@ RUN bash -c "$(curl -sL https://get.containerlab.dev)" -- -v ${ANO_CLAB_VERSION}
     && pip install --user passlib
 
 # install FastAPI
-COPY ./requirements.txt ./requirements.txt
+COPY ../requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt
 RUN pip install "fastapi[standard]"
 

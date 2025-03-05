@@ -1,0 +1,14 @@
+username admin secret autonetops
+!
+management api http-commands
+   no shut
+!
+ip domain name autonetops
+!
+ip ssh version 2
+!
+int Eth1
+  no shut
+  ip add 192.168.12.2/24
+int lo0
+  ip add 2.2.2.2/32
