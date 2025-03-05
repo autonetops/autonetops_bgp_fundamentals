@@ -26,7 +26,7 @@
           "description": "private-key-name"
       },
       "ARTOKEN": {
-        "description": "arista token"
+        "description": "arista token: https://autonetops.com/documents"
     }
   },
   "features": {
