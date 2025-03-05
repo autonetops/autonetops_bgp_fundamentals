@@ -20,5 +20,5 @@ topology:
       image: arista/ceos:latest
   
   links:
-    - endpoints: ["r1:Ethernet1", "r3:Ethernet1"]
-    - endpoints: ["r1:Ethernet2", "r2:Ethernet1"]
+    - endpoints: ["r1:eth1", "r3:eth1"]
+    - endpoints: ["r1:eth2", "r2:eth1"]
