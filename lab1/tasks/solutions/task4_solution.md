@@ -2,6 +2,8 @@
 #### Solution (`tasks/solutions/task4_solution.md`)
 
 ```python
+
+#### SOLUCAO ###
 from fastapi import FastAPI, HTTPException
 import yaml
 
