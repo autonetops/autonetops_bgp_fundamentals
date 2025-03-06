@@ -1,13 +1,16 @@
 devices:
   - ip: 172.20.20.11
+    name: r1
     type: ios
     username: admin
     password: autonetops
   - ip: 172.20.20.12
+    name: r2
     type: ios
     username: admin
     password: autonetops
   - ip: 172.20.20.13
+    name: r3
     type: ios
     username: admin
     password: autonetops

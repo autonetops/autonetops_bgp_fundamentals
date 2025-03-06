@@ -4,14 +4,13 @@ Nesta tarefa, você atualizará o endpoint existente `/bgp/neighbors` para aceit
 
 #### Passos
 1. **Atualizar o Endpoint**:
-   - Modifique o endpoint para `GET /bgp/neighbors/{device_ip}`.
-   - Use o parâmetro de caminho `device_ip` para especificar de qual dispositivo recuperar os vizinhos BGP.
-   - Verifique se o `device_ip` existe no dicionário `topology`. Caso contrário, retorne um erro 404.
+   - Adicione um endpoint para `GET /bgp/neighbors/{device_ip}`.
+   - Use o parâmetro de caminho `device_name` para especificar de qual dispositivo recuperar os vizinhos BGP.
+   - Verifique se o `device_name` existe na topologia. Caso contrário, retorne um erro 404.
 
 2. **Integrar com NAPALM**:
-   - Use o tipo e as credenciais do dispositivo do dicionário `topology` para se conectar via NAPALM.
+   - Use o tipo e as credenciais do dispositivo para se conectar via NAPALM.
    - Recupere os dados de vizinhos BGP usando o método `get_bgp_neighbors()` do NAPALM.
-   - Armazene os dados recuperados de vizinhos BGP no dicionário `topology` sob uma nova chave, `"bgp_neighbors"`.
 
 3. **Retornar os Dados de Vizinhos BGP**:
    - Retorne o IP do dispositivo e suas informações de vizinhos BGP em formato JSON.
@@ -21,4 +20,7 @@ Nesta tarefa, você atualizará o endpoint existente `/bgp/neighbors` para aceit
 from napalm import get_network_driver
 from fastapi import HTTPException
 
+@app.get("/bgp/neighbors/{device_name}")
+def get_bgp_neighbors(device_name: str):
 # Seu código aqui
+```

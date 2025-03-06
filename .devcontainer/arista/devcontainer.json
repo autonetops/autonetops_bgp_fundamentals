@@ -71,8 +71,7 @@
   "portsAttributes": {
     "2222": {
       "label": "FastAPI",
-      "protocol": "https",
-      "visibility": "public"
+      "protocol": "http"
     }
   },
   "postCreateCommand": "/bin/postCreate.sh",
