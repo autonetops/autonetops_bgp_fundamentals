@@ -40,3 +40,9 @@ app = FastAPI()
 ```
 
 #### Apos o codigo estiver pronto
+   Subir o servidor FastAPI escutando na porta 2222:
+    - fastapi run main.py --port 2222
+   
+   Acesso externo:
+    - echo $TF_VAR_VPN_CODESPACES_2222
+    - copie e cole no seu navegador com /docs
