@@ -1,6 +1,6 @@
-### Tarefa 4: Implementar um Endpoint de Upload de Topologia
+### Tarefa 4: Implementar um Endpoint retornando a Topologia
 
-Nesta tarefa, você criará um endpoint FastAPI que permite aos usuários fazer upload de um arquivo YAML contendo informações de topologia de rede. Esse endpoint analisará o arquivo YAML e armazenará os detalhes dos dispositivos em um dicionário global para uso em outras tarefas.
+Nesta tarefa, você criará um endpoint FastAPI que permite aos usuários verificar as informações de topologia de rede. Esse endpoint analisará o arquivo YAML e retornará os detalhes dos dispositivos em um dicionário global para uso em outras tarefas.
 
 #### DNS da Topologia
  - clab-bgp_fundamentals-r1
