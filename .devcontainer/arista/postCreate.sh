@@ -2,8 +2,8 @@
 
 set +e
 
-pip install eos-downloader
-ardl --token ${ARTOKEN} get eos --version ${ANO_ARISTA_ROUTER_VERSION} --format cEOS --import-docker --docker-tag latest
+#pip install eos-downloader
+#ardl --token ${ARTOKEN} get eos --version ${ANO_ARISTA_ROUTER_VERSION} --format cEOS --import-docker --docker-tag latest
 
 # Set the VPN CodeSpaces DNS based on the codespace name
 # CODESPACE_NAME is created by the codespaces by default

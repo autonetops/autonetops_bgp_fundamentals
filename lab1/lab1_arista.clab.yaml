@@ -9,15 +9,15 @@ topology:
     r1:
       mgmt-ipv4: 172.20.20.11
       kind: ceos
-      image: arista/ceos:latest
+      image: docker pull ghcr.io/autonetops/ceos:latest
     r2:
       mgmt-ipv4: 172.20.20.12
       kind: ceos
-      image: arista/ceos:latest
+      image: docker pull ghcr.io/autonetops/ceos:latest
     r3:
       mgmt-ipv4: 172.20.20.13
       kind: ceos
-      image: arista/ceos:latest
+      image: docker pull ghcr.io/autonetops/ceos:latest
   
   links:
     - endpoints: ["r1:eth1", "r3:eth1"]

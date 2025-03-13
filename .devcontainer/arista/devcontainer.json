@@ -24,10 +24,7 @@
       },
       "ANO_PRIV_KEY_NAME": {
           "description": "private-key-name"
-      },
-      "ARTOKEN": {
-        "description": "arista token (obrigatorio): https://autonetops.com/documents"
-    }
+      }
   },
   "features": {
       "ghcr.io/devcontainers/features/github-cli:1": {},
