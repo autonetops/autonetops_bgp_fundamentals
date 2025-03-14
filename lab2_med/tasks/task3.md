@@ -26,5 +26,5 @@ Você deve usar o atributo MED para direcionar o tráfego de forma granular, ref
   - `traceroute 3.3.3.3 source 1.1.1.1`: Deve passar por R2 (192.168.12.2), pois MED 0 (R2) < MED 200 (R4).
   - `traceroute 33.3.3.3 source 1.1.1.1`: Deve passar por R4 (192.168.14.4), pois MED 50 (R4) < MED 100 (R2).
   - `show ip bgp`: Verifique os valores de MED para cada prefixo:
-    - 3.3.3.3/32: MED 0 (R2), MED 200 (R4).
+    - 3.3.3.3/32: MED 100 (R2), MED 200 (R4).
     - 33.3.3.3/32: MED 100 (R2), MED 50 (R4).
