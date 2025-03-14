@@ -1,13 +1,30 @@
-### Tarefa 2: Configurar MED
+# Tarefa 2: Configurar o Atributo MED
 
-Configure o AS 200 de modo que R1, no AS 100, utilize R4 para alcançar qualquer prefixo anunciado no AS 200. Você deve manipular o MED para realizar essa tarefa.
+## Objetivo
+Manipular o tráfego do AS 100 (R1) para que ele prefira o caminho via R4 (AS 200) ao alcançar qualquer prefixo anunciado pelo AS 200, usando o atributo MED.
 
-O MED é usado como uma sugestão para um AS externo sobre o caminho preferido para entrar no AS que está anunciando a métrica. Essa sugestão é utilizada aqui porque o AS que recebe o atributo MED pode usar outro atributo, como weight, que sobrescreve o atributo MED. No que diz respeito ao MED, valores mais baixos têm maior preferência.
+## Contexto
+O MED (*Multi-Exit Discriminator*) é uma métrica que o AS 200 envia ao AS 100 para sugerir o caminho preferido de entrada. Valores menores de MED têm maior prioridade. Por padrão, se nenhum MED for especificado, o valor é assumido como 0. Aqui, R1 escolherá R4 se o MED de R4 for menor que o de R2.
 
-### Sugestao
-Crie uma route-map e
+## Instruções
+1. Em R2:
+   - Crie uma *route-map* para definir o MED como 100 para todos os prefixos anunciados a R1.
+   - Aplique a *route-map* na sessão eBGP com R1.
+2. Em R4:
+   - Não configure MED (ou defina como 0 explicitamente), permitindo que R1 o prefira.
 
-### NOTA
-Observe que o R1 recebe um valor de MED de 100 para todos os prefixos vindos do R2, pois o R1 não recebe um valor de MED do R4. O R1 considera o valor de MED vindo do R4 como zero.
+## Exemplo de Configuração
+Em R2:
+```
+route-map SET_MED permit 10
+set metric 100
+!
+router bgp 200
+neighbor 192.168.12.1 route-map SET_MED out
+```
 
-Quando o R1 compara os dois valores de MED vindos do mesmo AS, ele escolhe o caminho com o menor valor de MED, que é o R4.
+
+## Validação
+Em R1:
+- `show ip bgp`: Verifique que os prefixos do AS 200 via R4 têm MED 0 e via R2 têm MED 100.
+- `traceroute 2.2.2.2 source 1.1.1.1`: Confirme que o caminho passa por R4 (192.168.14.4).

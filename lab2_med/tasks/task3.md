@@ -1,15 +1,25 @@
-### Tarefa 3
+# Tarefa 3: Controle Granular de Rotas com MED
 
-Configure o(s) roteador(es) apropriado(s) no AS 200 para que o AS 100 passe pelo R4 para alcançar a rede 33.3.3.3/32 e pelo R2 para alcançar a rede 3.3.3.3/32.
-Você deve utilizar o MED para realizar essa tarefa.
+## Objetivo
+Configurar o AS 200 para que o AS 100 (R1) use:
+- R4 para alcançar a rede 33.3.3.3/32 (Loopback1 de R3).
+- R2 para alcançar a rede 3.3.3.3/32 (Loopback0 de R3).
 
-#### Sugestoes
-No R2, configure as seguintes duas prefix lists (NET3 e NET33), que fazem referência às redes 3.3.3.3/32 e 33.3.3.3/32, respectivamente:
+Você deve usar o MED para direcionar o tráfego de forma granular.
 
-Nota: É muito fácil lembrar que a prefix list NET3 faz referência à rede 3.3.3.3/32 e a prefix list NET33 faz referência à rede 33.3.3.3/32. No entanto, sempre que possível, você deve escolher um nome significativo.
+## Instruções
+1. Em R2:
+   - Crie *prefix-lists* para identificar 3.3.3.3/32 e 33.3.3.3/32.
+   - Use uma *route-map* para definir MED 50 para 33.3.3.3/32 e MED 10 para 3.3.3.3/32.
+   - Aplique na sessão com R1.
+2. Em R4:
+   - Configure MED 10 para 33.3.3.3/32 e MED 50 para 3.3.3.3/32 (inverso de R2).
+   - Aplique na sessão com R1.
 
-#### Verificacao
-show ip prefix-list
-A partir do R1:
-    traceroute 3.3.3.3 source 1.1.1.1 
-    traceroute 33.3.3.3 source 1.1.1.1
+
+## Validação
+- `show ip prefix-list`: Confirme as *prefix-lists* em R2 e R4.
+- Em R1:
+  - `traceroute 3.3.3.3 source 1.1.1.1`: Deve passar por R2 (192.168.12.2).
+  - `traceroute 33.3.3.3 source 1.1.1.1`: Deve passar por R4 (192.168.14.4).
+- `show ip bgp`: Verifique os valores de MED para cada prefixo.
