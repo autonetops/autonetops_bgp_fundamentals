@@ -2,24 +2,29 @@
 
 ## Objetivo
 Configurar o AS 200 para que o AS 100 (R1) use:
-- R4 para alcançar a rede 33.3.3.3/32 (Loopback1 de R3).
-- R2 para alcançar a rede 3.3.3.3/32 (Loopback0 de R3).
+- **R2 como link principal** para todas as redes, exceto uma exceção específica.
+- **R4** para alcançar a rede 33.3.3.3/32 (Loopback1 de R3).
 
-Você deve usar o MED para direcionar o tráfego de forma granular.
+Você deve usar o atributo MED para direcionar o tráfego de forma granular, refletindo o cenário onde R1-R2 é o caminho primário e R1-R4 é o backup com exceções.
 
 ## Instruções
-1. Em R2:
-   - Crie *prefix-lists* para identificar 3.3.3.3/32 e 33.3.3.3/32.
-   - Use uma *route-map* para definir MED 50 para 33.3.3.3/32 e MED 10 para 3.3.3.3/32.
-   - Aplique na sessão com R1.
-2. Em R4:
-   - Configure MED 10 para 33.3.3.3/32 e MED 50 para 3.3.3.3/32 (inverso de R2).
-   - Aplique na sessão com R1.
+1. **Em R2**:
+   - Configure uma *route-map* para definir MED 100 especificamente para a rede 33.3.3.3/32.
+   - Deixe o MED padrão (0) para todas as outras redes, tornando R2 o caminho preferido por padrão.
+   - Aplique a *route-map* na sessão eBGP com R1.
+2. **Em R4**:
+   - Configure um MED padrão de 200 para todos os anúncios, tornando R4 menos preferido por padrão.
+   - Crie uma exceção com MED 50 para a rede 33.3.3.3/32, tornando R4 o caminho preferido apenas para essa rede.
+   - Aplique a *route-map* na sessão eBGP com R1.
+
 
 
 ## Validação
-- `show ip prefix-list`: Confirme as *prefix-lists* em R2 e R4.
+- Em R2 e R4:
+  - `show ip prefix-list`: Confirme que a *prefix-list* NET33 referencia 33.3.3.3/32.
 - Em R1:
-  - `traceroute 3.3.3.3 source 1.1.1.1`: Deve passar por R2 (192.168.12.2).
-  - `traceroute 33.3.3.3 source 1.1.1.1`: Deve passar por R4 (192.168.14.4).
-- `show ip bgp`: Verifique os valores de MED para cada prefixo.
+  - `traceroute 3.3.3.3 source 1.1.1.1`: Deve passar por R2 (192.168.12.2), pois MED 0 (R2) < MED 200 (R4).
+  - `traceroute 33.3.3.3 source 1.1.1.1`: Deve passar por R4 (192.168.14.4), pois MED 50 (R4) < MED 100 (R2).
+  - `show ip bgp`: Verifique os valores de MED para cada prefixo:
+    - 3.3.3.3/32: MED 0 (R2), MED 200 (R4).
+    - 33.3.3.3/32: MED 100 (R2), MED 50 (R4).
