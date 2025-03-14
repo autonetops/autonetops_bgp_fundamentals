@@ -14,3 +14,8 @@ devices:
     type: eos
     username: admin
     password: autonetops
+  - ip: 172.20.20.13
+    name: r4
+    type: eos
+    username: admin
+    password: autonetops
