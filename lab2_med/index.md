@@ -3,13 +3,16 @@ Outro atributo BGP que podemos usar para manipular como um AS externo entrará e
 
 
 ## Topologia
-![bgp_fundamentals_lab2_med](https://ubjpcyfllztpftxqaldu.supabase.co/storage/v1/object/sign/img/labs/lab/md/bgp_fundamentals_diagram.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWcvbGFicy9sYWIvbWQvYmdwX2Z1bmRhbWVudGFsc19kaWFncmFtLndlYnAiLCJpYXQiOjE3NDA5NDA5NTUsImV4cCI6MTg5ODYyMDk1NX0.Eun52MyKJbWMVVXHM9eDiwCbHkVYKaLv1ZH1aSSOGLg)
+![bgp_fundamentals_lab2_med](https://ubjpcyfllztpftxqaldu.supabase.co/storage/v1/object/sign/img/labs/lab/md/bgp_path_manipulation_with_med.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWcvbGFicy9sYWIvbWQvYmdwX3BhdGhfbWFuaXB1bGF0aW9uX3dpdGhfbWVkLndlYnAiLCJpYXQiOjE3NDE5NjI4MTMsImV4cCI6MTg5OTY0MjgxM30.X94Qr_6ppmtTa8Hh6n3dlDSMINg0ft_LwcKVOFYw_yo)
 
-O laboratório utiliza uma topologia de três roteadores para demonstrar interações de eBGP e iBGP:
+O laboratório utiliza uma topologia de três roteadores para demonstrar manipulação de rotas com MED:
 
 
 ### Conexões
-    R1 eth1 <-> R3 eth1: Peering eBGP entre AS 100 e AS 200.
+    R1 <-> R2: Peering eBGP entre AS 100 e AS 200.
+    R1 <-> R4: Peering eBGP entre AS 100 e AS 200.
+    R2 <-> R3: Peering eBGP entre AS 200 e AS 200.
+    R3 <-> R4: Peering eBGP entre AS 200 e AS 200.
 
 
 ### Endereçamento IP
