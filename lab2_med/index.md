@@ -26,6 +26,7 @@ Este laboratório utiliza uma topologia com **quatro roteadores** (R1, R2, R3 e 
 
 ### Endereçamento IP
 Cada roteador possui interfaces **Loopback0** e **Loopback1** para identificação e anúncio de rotas no BGP:
+
 - **R1**: Lo0: 1.1.1.1/32, Lo1: 11.1.1.1/32
 - **R2**: Lo0: 2.2.2.2/32, Lo1: 22.2.2.2/32
 - **R3**: Lo0: 3.3.3.3/32, Lo1: 33.3.3.3/32
