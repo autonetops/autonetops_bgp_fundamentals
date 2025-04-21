@@ -14,7 +14,7 @@ Imagine que temos um **datacenter** operando no AS 200, com roteadores de borda 
 Neste laboratório, você ajustará o MED para direcionar o tráfego da filial (AS 100) de acordo com essas preferências, simulando um cenário real de controle de entrada em um datacenter.
 
 ## Topologia
-![Topologia do Laboratório BGP MED](https://ubjpcyfllztpftxqaldu.supabase.co/storage/v1/object/sign/img/labs/lab/md/bgp_path_manipulation_with_med.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWcvbGFicy9sYWIvbWQvYmdwX3BhdGhfbWFuaXB1bGF0aW9uX3dpdGhfbWVkLndlYnAiLCJpYXQiOjE3NDE5NjI4MTMsImV4cCI6MTg5OTY0MjgxM30.X94Qr_6ppmtTa8Hh6n3dlDSMINg0ft_LwcKVOFYw_yo)
+![Topologia do Laboratório BGP MED](https://ubjpcyfllztpftxqaldu.supabase.co/storage/v1/object/sign/img/labs/lab/topologia/bgp_path_manipulation_with_med.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWcvbGFicy9sYWIvdG9wb2xvZ2lhL2JncF9wYXRoX21hbmlwdWxhdGlvbl93aXRoX21lZC53ZWJwIiwiaWF0IjoxNzQ1MjQ3MjQ0LCJleHAiOjIwNjA2MDcyNDR9._cwXx9isihKtPswMiCcYlxQ9NED-PVgu6qoDcfV9PEI)
 
 Este laboratório utiliza uma topologia com **quatro roteadores** (R1, R2, R3 e R4) para demonstrar a manipulação de rotas com o atributo MED. A estrutura forma um quadrado, permitindo múltiplos caminhos entre os ASs, ideal para testar o controle de tráfego.
 
