@@ -1,7 +1,7 @@
 r2:
   conn:
     host: r2
-    device_type: cisco_ios
+    device_type: arista_eos
     username: admin
     password: autonetops
     port: 22
