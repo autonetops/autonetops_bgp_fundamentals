@@ -1,0 +1,14 @@
+r2:
+  conn:
+    host: r2
+    device_type: cisco_ios
+    username: admin
+    password: autonetops
+    port: 22
+  config: |
+    ip prefix-list DENY_10_1 deny 10.1.0.0/24 le 32
+    ip prefix-list DENY_10_1 permit 0.0.0.0/0 le 32
+    router bgp 100
+    ! ARISTA
+      address-family ipv4
+        neighbor 1.1.1.1 prefix-list DENY_10_1 in

@@ -20,7 +20,7 @@
   },
   "workspaceMount": "source=${localWorkspaceFolder}/fundamentos-bgp-automacao,target=/fundamentos-bgp-automacao,type=bind",
   "workspaceFolder": "/fundamentos-bgp-automacao",
-  "postCreateCommand": "chmod 700 /workspaces/fundamentos-bgp-automacao",
+  "postCreateCommand": "chmod 700 /workspaces/autonetops_bgp_fundamentals",
   "postStartCommand": "python3 /bin/postCreate.py postcreate --run commands.yaml",
   //"postStartCommand": ["containerlab", "deploy", "-t", "/fundamentos-bgp-automacao/clab/lab.clab.yaml"]
   "postAttachCommand": ["containerlab", "deploy", "-t", "/fundamentos-bgp-automacao/clab/lab.clab.yaml"]
