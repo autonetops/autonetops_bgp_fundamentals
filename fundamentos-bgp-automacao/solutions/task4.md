@@ -1,5 +1,5 @@
 
-#### Solution (`tasks/solutions/task4_solution.md`)
+#### Solution (`task4.md`)
 
 ```python
 
