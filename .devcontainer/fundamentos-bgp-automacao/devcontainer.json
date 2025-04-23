@@ -10,14 +10,6 @@
       "memory": "16gb",
       "storage": "32gb"
   },
-    "secrets": {
-      "ANO_CLAB_VERSION": {
-          "description": "containerlab version"
-      },
-      "ANO_PRIV_KEY_NAME": {
-          "description": "private-key-name"
-      }
-  },
   "forwardPorts": [2222],
   "portsAttributes": {
     "2222": {
@@ -26,9 +18,9 @@
       "visibility": "public"
     }
   },
-  "workspaceMount": "source=${localWorkspaceFolder}/labs/fundamentos-bgp-automacao,target=/fundamentos-bgp-automacao,type=bind",
+  "workspaceMount": "source=${localWorkspaceFolder}/fundamentos-bgp-automacao,target=/fundamentos-bgp-automacao,type=bind",
   "workspaceFolder": "/fundamentos-bgp-automacao",
-  "postCreateCommand": "chmod 700 /workspaces/autonetops_labs",
+  "postCreateCommand": "chmod 700 /workspaces/fundamentos-bgp-automacaos",
   "postStartCommand": "python3 /bin/postCreate.py postcreate --run commands.yaml",
   //"postStartCommand": ["containerlab", "deploy", "-t", "/fundamentos-bgp-automacao/clab/lab.clab.yaml"]
   "postAttachCommand": ["containerlab", "deploy", "-t", "/fundamentos-bgp-automacao/clab/lab.clab.yaml"]
