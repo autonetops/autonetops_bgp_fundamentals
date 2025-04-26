@@ -10,9 +10,9 @@ r1:
       neighbor 192.168.13.3 remote-as 200
       network 1.1.1.1 mask 255.255.255.255
       network 10.1.0.1 mask 255.255.255.255
-r2:
+r3:
   conn:
-    host: r2
+    host: r3
     device_type: arista_eos
     username: admin
     password: autonetops

@@ -1,6 +1,6 @@
 ## Topologia
 
-![topologia](topology.png)
+![topologia](topology.webp)
 
 # Tarefa 1: Configurar Peering eBGP
 
