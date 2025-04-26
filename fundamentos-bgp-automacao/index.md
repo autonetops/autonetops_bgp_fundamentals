@@ -4,7 +4,7 @@ Este laboratório introduz os alunos ao Border Gateway Protocol (BGP), um protoc
 O laboratório inclui um desafio de solução de problemas para reforçar o aprendizado e uma tarefa de automação de rede usando FastAPI e NAPALM para recuperar informações de vizinhos BGP, demonstrando práticas modernas de rede.
 
 ## Topologia
-![bgp_fundamentals_diagram](https://ubjpcyfllztpftxqaldu.supabase.co/storage/v1/object/sign/img/labs/lab/topologia/bgp_fundamentals_diagram.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWcvbGFicy9sYWIvdG9wb2xvZ2lhL2JncF9mdW5kYW1lbnRhbHNfZGlhZ3JhbS53ZWJwIiwiaWF0IjoxNzQ1MjQ5MDA4LCJleHAiOjIwNjA2MDkwMDh9.4gQlZsTlHmEc9f3YufDXUKAq87c5dSsZXpLA_V5luhs)
+![bgp_fundamentals_diagram](https://ubjpcyfllztpftxqaldu.supabase.co/storage/v1/object/sign/img/labs/lab/topologia/bgp_fundamentals_diagram.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWcvbGFicy9sYWIvdG9wb2xvZ2lhL2JncF9mdW5kYW1lbnRhbHNfZGlhZ3JhbS53ZWJwIiwiaWF0IjoxNzQ1Njg1OTM4LCJleHAiOjIwNjEwNDU5Mzh9.S01AScP8vfMuugAsHMMnEXqiXLBq_zbPlJnnwtCwLIo)
 O laboratório utiliza uma topologia de três roteadores para demonstrar interações de eBGP e iBGP:
 
     R1 (AS 100): Um roteador atuando como o gateway entre AS 100 e AS 200.
