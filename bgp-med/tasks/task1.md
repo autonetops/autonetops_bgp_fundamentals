@@ -1,3 +1,7 @@
+## Topologia
+
+![topologia](topology.png)
+
 # Tarefa 1: Configurar Sessões eBGP
 
 ## Objetivo
@@ -7,7 +11,6 @@ Configurar o BGP básico para estabelecer conectividade entre os ASs. O AS 200 (
 1. No AS 200:
    - Configure R2, R3 e R4 no AS 200.
    - Certifique-se de que o OSPF (já pré-configurado) mantém a conectividade interna.
-   - Não é necessário iBGP *full-mesh* entre R2, R3 e R4, pois o OSPF já distribui as rotas internas.
 2. Configure as sessões eBGP:
    - R2 <-> R1: AS 200 para AS 100.
    - R4 <-> R1: AS 200 para AS 100.

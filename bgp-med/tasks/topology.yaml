@@ -1,21 +1,21 @@
 devices:
   - ip: 172.20.20.11
     name: r1
-    type: eos
+    type: cisco_ios
     username: admin
     password: autonetops
   - ip: 172.20.20.12
     name: r2
-    type: eos
+    type: cisco_ios
     username: admin
     password: autonetops
   - ip: 172.20.20.13
     name: r3
-    type: eos
+    type: cisco_ios
     username: admin
     password: autonetops
   - ip: 172.20.20.13
     name: r4
-    type: eos
+    type: cisco_ios
     username: admin
     password: autonetops

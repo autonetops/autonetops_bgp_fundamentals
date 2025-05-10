@@ -3,8 +3,7 @@ name: bgp_fundamentals_med
 topology:
   defaults:
     kind: cisco_iol
-    startup-config: configs/arista/__clabNodeName__.partial.cfg
-
+    startup-config: configs/cisco/__clabNodeName__.partial.cfg
   nodes:
     r1:
       mgmt-ipv4: 172.20.20.11
