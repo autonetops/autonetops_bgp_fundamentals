@@ -6,3 +6,4 @@
 - echo "172.20.20.13 r3" >> /etc/hosts
 - echo "alias r3='sshpass -p autonetops ssh -o \"StrictHostKeyChecking no\" admin@172.20.20.13'" >> ~/.bashrc
 - echo "172.20.20.13 r3" >> /etc/hosts
+- chmod 700 /bgp-med
