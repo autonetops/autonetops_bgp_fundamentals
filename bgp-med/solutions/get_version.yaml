@@ -1,0 +1,8 @@
+- name: Coletar versão do dispositivo
+  hosts: router1
+  tasks:
+    - name: Obter versão
+      cisco.ios.ios_facts:
+      register: resultado
+    - debug:
+        msg: "Versão: {{ resultado.ansible_facts.ansible_net_version }}"
