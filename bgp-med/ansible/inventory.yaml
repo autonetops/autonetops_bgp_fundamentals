@@ -1,0 +1,38 @@
+---
+all:
+  children:
+    routers:
+      hosts:
+        router1:
+          ansible_host: 172.20.20.11
+        router2:
+          ansible_host: 172.20.20.12
+        router3:
+          ansible_host: 172.20.20.13
+        router4:
+          ansible_host: 172.20.20.14
+    dc1:
+      hosts:
+        router2:
+    dc2:
+      hosts:
+        router4:
+    dc:
+      children:
+        dc1:
+        dc2:
+      vars:
+        bgp_as: 200
+    branch1:
+      hosts:
+        router1:
+      vars:
+        bgp_as: 100
+    cisco:
+      children:
+        routers:
+      vars:
+        ansible_connection: network_cli
+        ansible_network_os: cisco.ios.ios
+        ansible_user: admin
+        ansible_password: autonetops
