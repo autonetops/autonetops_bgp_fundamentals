@@ -16,7 +16,8 @@ topology:
       image: ghcr.io/autonetops/autonetops_labs/cisco_iol:latest
     r4:
       mgmt-ipv4: 172.20.20.14
-      image: ghcr.io/autonetops/autonetops_labs/cisco_iol:latest
+      image: ghcr.io/autonetops/ceos:latest
+      kind: arista_ceos
   links:
     - endpoints: ["r1:eth1", "r2:eth1"]
     - endpoints: ["r2:eth2", "r3:eth1"]

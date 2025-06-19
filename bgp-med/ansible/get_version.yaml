@@ -1,5 +1,5 @@
 - name: Coletar versão do dispositivo
-  hosts: router1
+  hosts: dc1
   tasks:
     - name: Obter versão
       cisco.ios.ios_facts:

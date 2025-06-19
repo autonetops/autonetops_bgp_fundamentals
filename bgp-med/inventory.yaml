@@ -1,0 +1,22 @@
+---
+
+- hostname: r1
+  optional_args:
+    driver: ios
+  password: autonetops
+  username: admin
+- hostname: r2
+  optional_args:
+    driver: ios
+  password: autonetops
+  username: admin
+- hostname: r3
+  optional_args:
+    driver: ios
+  password: autonetops
+  username: admin
+- hostname: r4
+  optional_args:
+    driver: eos
+  password: autonetops
+  username: admin

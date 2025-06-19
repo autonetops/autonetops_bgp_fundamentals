@@ -48,7 +48,7 @@ r3:
 r4:
   conn:
     host: r4
-    device_type: cisco_ios
+    device_type: arista_eos
     username: admin
     password: autonetops
     port: 22

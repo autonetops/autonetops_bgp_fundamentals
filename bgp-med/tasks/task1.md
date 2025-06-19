@@ -16,7 +16,9 @@ Configurar o BGP básico para estabelecer conectividade entre os ASs. O AS 200 (
    - R4 <-> R1: AS 200 para AS 100.
 3. Anuncie apenas as interfaces **Loopback0** (e.g., 1.1.1.1/32 em R1) no BGP usando o comando `network`.
 
+### Solução
 > autonetops task 1 --show
+
 > autonetops task 1
 
 ## Validação
@@ -50,7 +52,9 @@ router bgp 200
 neighbor 192.168.12.1 route-map SET_MED out
 ```
 
+### Solução
 > autonetops task 2 --show
+
 > autonetops task 2
 
 ## Validação
@@ -78,7 +82,9 @@ Você deve usar o atributo MED para direcionar o tráfego de forma granular, ref
    - Crie uma exceção com MED 50 para a rede 33.3.3.3/32, tornando R4 o caminho preferido apenas para essa rede.
    - Aplique a *route-map* na sessão eBGP com R1.
 
+### Solução
 > autonetops task 3 --show
+
 > autonetops task 3
 
 ## Validação
