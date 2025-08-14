@@ -1,0 +1,22 @@
+---
+
+- host: r1
+  platform: cisco_iosxe
+  auth_username: admin
+  auth_password: autonetops
+  auth_strict_key: false
+- host: r2
+  platform: cisco_iosxe
+  auth_username: admin
+  auth_password: autonetops
+  auth_strict_key: false
+- host: r3
+  platform: cisco_iosxe
+  auth_username: admin
+  auth_password: autonetops
+  auth_strict_key: false
+- host: r4
+  platform: arista_eos
+  auth_username: admin
+  auth_password: autonetops
+  auth_strict_key: false

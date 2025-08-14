@@ -1,0 +1,37 @@
+---
+
+- host: r1
+  username: admin
+  password: autonetops
+  device_type: cisco_ios
+  templates_info:
+    name_server: 
+      - 2.2.2.2
+      - 1.1.1.11
+    interfaces:
+      - name: Ethernet0/1
+        description: Uplink to ISP
+- host: r2
+  username: admin
+  password: autonetops
+  device_type: cisco_ios
+  templates_info:
+    name_server: 
+      - 2.2.2.2
+      - 2.2.2.22
+- host: r3
+  username: admin
+  password: autonetops
+  device_type: cisco_ios
+  templates_info:
+    name_server: 
+      - 3.3.3.3
+      - 3.3.3.33
+- host: r4
+  username: admin
+  password: autonetops
+  device_type: arista_eos
+  templates_info:
+    name_server: 
+      - 4.4.4.4
+      - 4.4.4.44
