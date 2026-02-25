@@ -4,6 +4,9 @@ topology:
   defaults:
     kind: arista_ceos
     startup-config: configs/arista/__clabNodeName__.cfg
+  kinds:
+    arista_ceos:
+      image: ghcr.io/autonetops/ceos:latest
 
   nodes:
     r1:
