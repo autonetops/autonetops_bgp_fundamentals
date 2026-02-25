@@ -2,21 +2,18 @@ name: bgp_fundamentals
 
 topology:
   defaults:
-    kind: ceos
+    kind: arista_ceos
     startup-config: configs/arista/__clabNodeName__.cfg
 
   nodes:
     r1:
       mgmt-ipv4: 172.20.20.11
-      kind: ceos
       image: ghcr.io/autonetops/ceos:latest
     r2:
       mgmt-ipv4: 172.20.20.12
-      kind: ceos
       image: ghcr.io/autonetops/ceos:latest
     r3:
       mgmt-ipv4: 172.20.20.13
-      kind: ceos
       image: ghcr.io/autonetops/ceos:latest
   
   links:
