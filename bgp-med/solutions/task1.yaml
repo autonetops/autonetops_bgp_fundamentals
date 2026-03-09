@@ -6,6 +6,7 @@ r1:
     password: autonetops
     port: 22
   config: |
+    lldp run
     router bgp 100
       network 1.1.1.1 mask 255.255.255.255
       network 11.1.1.1 mask 255.255.255.255
@@ -20,6 +21,7 @@ r2:
     password: autonetops
     port: 22
   config: |
+    lldp run
     router bgp 200
       neighbor 192.168.12.1 remote-as 100
       neighbor 192.168.23.3 remote-as 200
@@ -37,6 +39,7 @@ r3:
     password: autonetops
     port: 22
   config: |
+    lldp run
     router bgp 200
       neighbor 192.168.23.2 remote-as 200
       neighbor 192.168.23.2 next-hop-self
@@ -53,6 +56,7 @@ r4:
     password: autonetops
     port: 22
   config: |
+    lldp run
     router bgp 200
       neighbor 192.168.14.1 remote-as 100
       !
