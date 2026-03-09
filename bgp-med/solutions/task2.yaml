@@ -1,6 +1,6 @@
 r2:
   conn:
-    host: r2
+    host: 172.20.20.12
     device_type: cisco_ios
     username: admin
     password: autonetops
